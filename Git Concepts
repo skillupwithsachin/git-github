@@ -1,0 +1,65 @@
+Resolving merge conflicts in Git entails discovering conflicting changes, manually updating the disputed files to reconcile discrepancies, and marking them as resolved using "git add." After resolving any conflicts, use "git merge --continue" or "git rebase --continue" to finish the merge process. A new merging commit is created, and the modifications are committed using "git commit." If problems emerge, the merging can be terminated with "git merge --abort." Finally, submit the resolved modifications to the remote repository using "git push origin <branch>." Effective communication with the team is essential for ensuring a smooth integration of changes and joint progress.
+
+Git Revert:
+
+Git's git revert command creates a new commit that undoes the modifications performed in the previous commit. It accomplishes this by applying the opposite of the given commit's modifications. Reverting is a safer way to undo changes on shared branches since it generates a new commit rather than changing the project's history. This promotes uniformity among contributors, but it might result in a bloated commit history over time.
+
+Git Reset
+
+Git reset is another Git command, but it works differently from Git revert. It is used to reset the current branch to a certain commit, thereby erasing all commits since that point. The --soft option keeps the modifications made in the commits, designating them as uncommitted changes, whereas --mixed (the default) keeps the changes but stages them for a new commit, and --hard discards both changes and commitments, reverting the whole working directory to the specific commit.
+
+
+
+Reset vs. Revert:
+
+The fundamental distinction is their influence on commit history. Git reset changes the commit history by erasing commits, which might be troublesome in shared branches. It's ideal for local branches or when a fresh start is sought. Git revert, on the other hand, is safer for shared branches since it reverses modifications by producing new commits while retaining the commit history integrity. The decision between them is determined by the unique use case and collaborative needs, with a focus on combining history clarity with project stability.
+
+Git rebase:-
+
+Git rebase is a Git command that merges changes from one branch into another by applying each commit separately. It is distinguished from git merge by creating a linear commit history. To rebase, switch to the destination branch, update it with git pull, and then use git rebase <source_branch>. If conflicts emerge, fix them, continue the rebase using git rebase --continue, and, once finished, force-push the changes with care. While git rebase creates a cleaner commit history, it should be used with caution, particularly on shared branches, to prevent interrupting cooperation by rewriting commit history.
+
+Working with git Squash
+
+Working with git squash entails integrating several, generally smaller, contributions into a single, more coherent one. This is especially important for keeping a clearer and more understandable commit history, which makes it simpler for others to track the growth of the codebase. This is a thorough guide:
+
+Start an Interactive Rebase:
+
+Begin by initiating an interactive rebase with the following command:
+git rebase -i HEAD ~n
+Mark Commits for Squashing:
+
+An interactive rebase editor will open, displaying a list of commits. Change "pick" to "squash" (or just "s") for the commits you want to squash
+
+Edit Commit Messages:
+
+Save and close the editor. Another editor will open, allowing you to edit the commit messages. Keep the message of the commit you want to retain or modify it as needed.
+
+Complete the Rebase:
+
+Save and close the editor again. Git will apply the changes, combining the selected commits into a single commit. If conflicts occur during this process, Git will prompt you to resolve them.
+
+Write the New Commit Message:
+
+After the rebase, Git will prompt you to write a new commit message for the squashed commit. Provide a concise and descriptive message summarizing the changes.
+
+Push the Changes (if necessary): git push origin branch
+
+Git cherrypick
+
+There are occasions when we don't want to merge a feature branch into our main branch; instead, we want to choose a commit and have the changes in that commit reflected in our main branch. The cherry-picking procedure can help with this. In this step, we select a commit and add it to our branch.
+
+In Git, cherry-picking is the process of choosing and applying certain commits from one branch to another. It enables you to choose specific commits and apply them to a separate branch, even if they were not previously included in that branch's commit history.
+
+Cherry-picking is handy when you wish to integrate certain changes from one branch into another without merging the entire branch. It can be useful in situations like: Applying bug fixes: If a bug has been addressed in one branch and you wish to apply the patch to another without merging the entire branch, you can cherry-pick the commit containing the fix. Cherry-picking helps you to choose and apply the necessary commits when a feature is created on a different branch and you only want to incorporate certain features in another branch.
+
+What is Git fork
+
+Forking a repository creates a clone of the repository. When you fork a repository, you create a new copy of it on your GitHub account. When many developers wish to collaborate on a project but need to make modifications that are not acceptable for the original repository, forking is commonly employed in open-source software development. Developers can make modifications separately by forking the repository and then submitting pull requests to the original repository to contribute their changes back upstream.
+
+Reasons for Forks
+
+You have your own duplicate of the project on which you may test your modifications without affecting the original project.
+
+This allows the project's maintainer to more thoroughly review the modifications you made to the project and has the authority to approve, reject, or recommend anything.
+
+When you clone another person's Open-Source project, you do not have the right to submit code straight into it. 
