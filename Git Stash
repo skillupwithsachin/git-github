@@ -1,0 +1,17 @@
+Git stash is a useful Git feature that allows users to temporarily store uncommitted changes, allowing for easier branch switching or other actions. The git stash command is used to preserve local changes as well as an optional message summarizing the changes. The git stash pop command then gets and applies the most recent stash to the current working directory, removing it from the stash list. This approach assists in project management by allowing developers to save unfinished changes without committing them. Furthermore, the git stash list tool offers an overview of existing stashes, and git stash apply may be used to apply a single stash selectively. Overall, git stash is a useful tool for keeping your version control process clean and structured.
+
+Here's a basic workflow using git stash and git stash pop:
+
+1. Stash Changes:
+
+git stash
+
+2. Switch Branch or Perform Other Operations:
+
+Git checkout branch_name
+
+3. Apply Stashed Changes:
+
+When you're ready to apply your stashed changes back to the working directory, use the git stash pop command:
+
+git stash pop
