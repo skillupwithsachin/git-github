@@ -1,0 +1,22 @@
+Integrating Git with Visual Studio Code and authenticating with GitHub may be done via SSH or HTTPS. Here are the instructions for both authentication methods:
+
+Authentication with HTTPS:
+
+To authenticate with GitHub using a Personal Access Token (PAT) over HTTPS, you'll need to generate a token in your GitHub account. Here are the steps:
+GitHub Account:
+If you don't have a GitHub account, create one at GitHub.
+Navigate to Personal Access Tokens:
+Once logged in, go to your GitHub profile, and click on "Settings."
+Access Developer Settings:
+In the left sidebar, under "Settings," find "Developer settings," and click on it.
+Generate a New Token:
+In the Developer settings menu, select "Personal access tokens," and click on "Generate token."
+Configure Token:
+Provide a descriptive name for the token, and choose the desired scopes based on the permissions you need. For basic Git operations, you can select the "repo" scope.
+Generate Token:
+Click on "Generate token" at the bottom of the page.
+Copy and Save the Token:
+After generating the token, GitHub will display it only once. Copy the token to your clipboard and save it securely. This token serves as your password for Git operations.
+Use Token with Git:
+In VSCode or any Git client, when prompted for a username and password, use your GitHub username as the username and the generated token as the password.
+Authentication with SSH:
