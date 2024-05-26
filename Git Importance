@@ -1,0 +1,15 @@
+Git is the most used version control system. Git monitors the changes you make to files, so you have a record of what you've done and may rollback to particular versions if necessary. Git also makes cooperation easier by allowing several people's modifications to be merged into a single source.
+
+Git is a fast and efficient distributed VCS technology that can manage projects of all sizes, from tiny to extremely big. Git offers inexpensive local branching, accessible staging locations, and numerous processes. Git is free and open-source software, which reduces costs because developers may use it without paying. It supports nonlinear development. Git allows several developers or teams to operate independently without impacting the work of others.
+
+Git is noteworthy for its performance benefits. Branching and merging, committing new changes, and comparing previous versions are all performance-optimised procedures. One of Git's performance advantages is its powerful algorithms.
+
+Git focuses solely on file content for deciding the storage and version history of the tree. The source code files are often renamed, separated, and reorganized. The object format of Git repository files combines delta encoding and compression. It saves directory contents and version information items.
+
+Installation of GIT:-
+
+1) Download the latest version of Git and choose the 64/32 bit version. After the file is downloaded, install it in the system. Once installed, select Launch the Git Bash, then click on finish. The Git Bash is now launched.
+
+2) Check the Git version: git --version
+
+3 ) If Git is successfully installed, the version number will be displayed in the console.
